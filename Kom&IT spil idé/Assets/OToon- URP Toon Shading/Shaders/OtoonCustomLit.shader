@@ -146,7 +146,7 @@ Shader "URP/OToonCustomLit"
             #pragma target 2.0
             #pragma shader_feature_local _OUTLINE
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
-            #include "Library/OToonOutline.hlsl"
+            #include "ToonLibrary/OToonOutline.hlsl"
             ENDHLSL
 
         }
@@ -215,8 +215,8 @@ Shader "URP/OToonCustomLit"
             #pragma fragment LitPassFragmentSimple
             #define BUMP_SCALE_NOT_SUPPORTED 1
 
-            #include "Library/OToonCustomLitInput.hlsl"
-            #include "Library/OToonCustomLitForwardPass.hlsl"
+            #include "ToonLibrary/OToonCustomLitInput.hlsl"
+            #include "ToonLibrary/OToonCustomLitForwardPass.hlsl"
             ENDHLSL
 
         }
@@ -250,7 +250,7 @@ Shader "URP/OToonCustomLit"
             #pragma vertex ShadowPassVertex
             #pragma fragment ShadowPassFragment
 
-            #include "Library/OToonCustomLitInput.hlsl"
+            #include "ToonLibrary/OToonCustomLitInput.hlsl"
             #include "Packages/com.unity.render-pipelines.universal/Shaders/ShadowCasterPass.hlsl"
             ENDHLSL
 
@@ -310,7 +310,7 @@ Shader "URP/OToonCustomLit"
             #pragma shader_feature_local_fragment _EMISSION
             #pragma shader_feature_local_fragment _SPECGLOSSMAP
 
-            #include "Library/OToonCustomLitInput.hlsl"
+            #include "ToonLibrary/OToonCustomLitInput.hlsl"
             #include "Packages/com.unity.render-pipelines.universal/Shaders/SimpleLitMetaPass.hlsl"
 
             ENDHLSL
@@ -333,7 +333,7 @@ Shader "URP/OToonCustomLit"
             #pragma shader_feature_local_fragment _ALPHATEST_ON
             #pragma shader_feature_local_fragment _ALPHAPREMULTIPLY_ON
 
-            #include "Library/OToonCustomLitInput.hlsl"
+            #include "ToonLibrary/OToonCustomLitInput.hlsl"
             #include "Packages/com.unity.render-pipelines.universal/Shaders/Utils/Universal2D.hlsl"
             ENDHLSL
 
